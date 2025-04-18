@@ -25,8 +25,11 @@ st.set_page_config(page_title="Reddit Nutrition Helper", layout="wide")
 def load_models():
     embedder = SentenceTransformer("all-MiniLM-L6-v2")
     summarizer = pipeline("summarization", model="facebook/bart-large-cnn", device=0 if torch.cuda.is_available() else -1)
+    import spacy.cli
+    spacy.cli.download("en_core_web_sm")
     nlp = spacy.load("en_core_web_sm")
     return embedder, summarizer, nlp
+
 
 embedder, summarizer, nlp = load_models()
 
