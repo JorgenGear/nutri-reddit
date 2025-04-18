@@ -1,0 +1,10 @@
+streamlit
+pandas
+numpy==1.26.4
+spacy
+scikit-learn
+sentence-transformers
+transformers
+plotly
+torch
+praw

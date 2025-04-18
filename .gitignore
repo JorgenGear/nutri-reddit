@@ -1,0 +1,13 @@
+# Ignore secrets
+.streamlit/secrets.toml
+
+# Python crap
+__pycache__/
+*.pyc
+
+# Jupyter cache if any
+.ipynb_checkpoints/
+
+# System stuff
+.DS_Store
+.env
